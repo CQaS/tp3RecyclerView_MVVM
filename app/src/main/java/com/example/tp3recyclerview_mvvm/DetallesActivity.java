@@ -26,8 +26,7 @@ public class DetallesActivity extends AppCompatActivity
         pelisDetalles = (Peliculas) getIntent().getExtras().getSerializable("itemPelis");
         portadaDetalles.setImageResource(pelisDetalles.getFoto());
 
-        tituloDetalles.setText("Titulo: " + pelisDetalles.getTitulo() + "\nDirector: " + pelisDetalles.getDirector());
-        reseniaDetalles.setText("Actor: " + pelisDetalles.getActor() + "\n\n" + pelisDetalles.getDescripcion());
+        setData();
     }
 
     private void iniciar()
@@ -35,6 +34,12 @@ public class DetallesActivity extends AppCompatActivity
         tituloDetalles = findViewById(R.id.txtTituloDetalle);
         reseniaDetalles = findViewById(R.id.txtReseniaDetalles);
         portadaDetalles = findViewById(R.id.ivPortadaDetalles);
+    }
+
+    private void setData()
+    {
+        tituloDetalles.setText("Titulo: " + pelisDetalles.getTitulo() + "\nDirector: " + pelisDetalles.getDirector());
+        reseniaDetalles.setText("Actor: " + pelisDetalles.getActor() + "\n\n" + pelisDetalles.getDescripcion());
     }
 
 
