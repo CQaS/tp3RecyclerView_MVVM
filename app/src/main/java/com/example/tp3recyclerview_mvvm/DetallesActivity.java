@@ -22,6 +22,7 @@ public class DetallesActivity extends AppCompatActivity
         setContentView(R.layout.activity_detalles);
 
         iniciar();
+
         pelisDetalles = (Peliculas) getIntent().getExtras().getSerializable("itemPelis");
         portadaDetalles.setImageResource(pelisDetalles.getFoto());
 

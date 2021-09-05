@@ -40,12 +40,12 @@ public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
-        final Peliculas peliculasItems = peliculas.get(position);
-
        holder.txtTitulo.setText(peliculas.get(position).getTitulo());
        holder.ivPortada.setImageResource(peliculas.get(position).getFoto());
        holder.txtResenia.setText(peliculas.get(position).getResenia());
 
+       //capturar el evento Click en el Boton...
+       final Peliculas peliculasItems = peliculas.get(position);
        holder.btnDetalle.setOnClickListener(new View.OnClickListener()
        {
            @Override
